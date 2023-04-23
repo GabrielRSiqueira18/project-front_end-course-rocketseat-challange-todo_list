@@ -1,5 +1,12 @@
+import { MainContainer, SpanMain } from './styles';
+
 export function Main() {
   return(
-    <h1>Main</h1>
+    <MainContainer>
+      <header>
+        <SpanMain spanColor="blue">Tarefas criadas</SpanMain>
+        <SpanMain spanColor='purple'>Concluídas</SpanMain>
+      </header>
+    </MainContainer>
   )
 }

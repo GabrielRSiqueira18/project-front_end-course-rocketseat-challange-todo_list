@@ -1,5 +1,5 @@
 import { HeaderContainer, SpanHeader } from "./styles";
-import rocktLogo from "../../assets/Layer 2 (1).svg"
+import rocktLogo from "../../assets/rocktLogo.svg"
 
 export function Header() {
   return(

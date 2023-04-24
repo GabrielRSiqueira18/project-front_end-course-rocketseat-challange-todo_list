@@ -13,7 +13,7 @@ export function Form({ inputValue, actionsList, handleInputValue, handleSubmitFo
   const inputValueLowerCase = inputValue.toLowerCase()
   const actionsListLowerCase = actionsList.map(value => value.toLowerCase())
 
-  const isDisabledSubmitButton = !inputValueLowerCase || actionsListLowerCase.includes(inputValue)
+  const isDisabledSubmitButton = actionsListLowerCase.includes(inputValueLowerCase) || !inputValue
 
   return(
     <FormContainer>

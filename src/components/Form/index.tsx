@@ -1,15 +1,20 @@
-import { FormContainer } from "./styles";
+import { FormContainer, ParagraphySameAction } from "./styles";
 import plusNormal from "../../assets/plus.svg"
 import { ChangeEventHandler, MouseEventHandler } from "react";
 
 interface FormProps {
   inputValue: string
+  actionsList: string[]
   handleInputValue: ChangeEventHandler<HTMLInputElement>
   handleSubmitForm: MouseEventHandler<HTMLButtonElement>
 }
 
-export function Form({ inputValue, handleInputValue, handleSubmitForm }: FormProps) {
-  
+export function Form({ inputValue, actionsList, handleInputValue, handleSubmitForm }: FormProps) {
+  const inputValueLowerCase = inputValue.toLowerCase()
+  const actionsListLowerCase = actionsList.map(value => value.toLowerCase())
+
+  const isDisabledSubmitButton = !inputValueLowerCase || actionsListLowerCase.includes(inputValue)
+
   return(
     <FormContainer>
       <form action="">
@@ -23,12 +28,17 @@ export function Form({ inputValue, handleInputValue, handleSubmitForm }: FormPro
         <button
           type="submit"
           onClick={handleSubmitForm}
+          disabled={isDisabledSubmitButton}
         >
           Criar
           <img
             src={plusNormal}/>
         </button>
+        
       </form>
+      {actionsListLowerCase.includes(inputValueLowerCase) ? (
+         <ParagraphySameAction>Ja existe uma ação com o nome: {inputValue}</ParagraphySameAction>
+        ) : (<span></span>) }
     </FormContainer>
   )
 }

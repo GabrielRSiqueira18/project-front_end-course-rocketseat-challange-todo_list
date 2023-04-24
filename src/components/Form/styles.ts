@@ -50,12 +50,16 @@ export const FormContainer = styled.div`
 
       cursor: pointer;
 
-      &:hover {
+      &:not(:disabled):hover {
         transition: .2s;
 
         background-color: ${props => props.theme["blue"]};
       }
 
+      &:disabled {
+        filter: brightness(0.6);
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -66,4 +70,10 @@ export const FormContainer = styled.div`
       padding: 1rem;
     }
   }
+`
+
+export const ParagraphySameAction = styled.p`
+  color: ${props => props.theme.danger};
+  font-size: 1.25;
+  font-weight: 700;
 `

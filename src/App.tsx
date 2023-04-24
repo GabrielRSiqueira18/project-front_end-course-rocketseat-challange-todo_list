@@ -78,6 +78,7 @@ return (
       <GapFormMain>
         <Form
           inputValue={inputValue}
+          actionsList={actionsList}
           handleInputValue={handleInputValue}
           handleSubmitForm={handleSubmitForm}
         />

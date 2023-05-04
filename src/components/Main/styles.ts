@@ -6,8 +6,9 @@ import check from "../../assets/check.svg"
 export const MainContainer = styled.div`
   max-width: 46rem;
   width: 80%;
+  height: calc(100vh - 21.5rem);
   margin: 0 auto;
-
+  
   display: flex;
   flex-direction: column;
   gap: 1.5rem;

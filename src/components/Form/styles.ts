@@ -24,7 +24,7 @@ export const FormContainer = styled.div`
       border-radius: 8px;
       border: 1px solid ${props => props.theme["gray-700"]};
       color: ${props => props.theme["gray-100"]};
-      padding-left: 1rem;
+      padding: 0 1rem;
 
       &:focus {
         border-color: ${props => props.theme["purple-dark"]};

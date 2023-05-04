@@ -6,6 +6,7 @@ import { Form } from "./components/Form"
 import { Main } from './components/Main/index';
 import { GapFormMain } from "./GapFormMain"
 import { useState, ChangeEvent, FormEvent } from "react"
+import { Footer } from "./components/Footer"
 
 function App() {
   
@@ -92,6 +93,7 @@ return (
         />
       </GapFormMain>
       
+      <Footer />
 
       <GlobalStyle/>
     </ThemeProvider>

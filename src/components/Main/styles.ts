@@ -118,6 +118,8 @@ export const TaskDone = styled.div<TaskDoneProps>`
 export const TaskText = styled.div<{isChecked: boolean}>`
   flex: 1;
   text-align: justify;
+  width: 10px;
+  word-break: break-all;
 
   font-size: 0.875rem;
   font-weight: 400;
